@@ -18,6 +18,7 @@ export type Collapsible = {
   translateY: Animated.AnimatedInterpolation;
   progress: Animated.AnimatedInterpolation;
   opacity: Animated.AnimatedInterpolation;
+  setCurrentY: Function;
 };
 
 export type CollapsibleStackConfig = {

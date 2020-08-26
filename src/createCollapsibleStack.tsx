@@ -115,6 +115,10 @@ const createCollapsibleStack = (
         const translateY = Animated.multiply(progress, -headerHeight);
         const opacity = Animated.subtract(1, progress);
 
+        const setCurrentY = currentY => {
+          positionY.setValue(currentY);
+        };
+
         const collapsible: Collapsible = {
           onScroll,
           onScrollWithListener,
@@ -129,6 +133,7 @@ const createCollapsibleStack = (
           translateY,
           progress,
           opacity,
+          setCurrentY,
         };
         if (
           route.params?.isCollapsibleDirty ||
