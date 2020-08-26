@@ -28,6 +28,7 @@
     "flowgen": "sh flow.sh",
     "lint": "eslint --ext '.js,.ts,.tsx' index.ts ./src",
     "build": "tsc && yarn flowgen",
+    "prepare": "npm run build",
     "clean": "rm -rf lib",
     "build-publish": "yarn clean && yarn lint && yarn build && yarn publish"
   },
